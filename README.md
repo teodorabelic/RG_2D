@@ -1,14 +1,59 @@
-5. Klima-uređaj
-Napraviti 2D grafičku aplikaciju za prikaz rada klima-uređaja.
+# Air Conditioner – 2D Graphics Simulation
 
-Na vrhu ekrana se nalazi beli pravougaonik koji predstavlja klima-uređaj, a na dnu ispod njega se nalazi providni lavor. Na početku programa, klima-uređaj je isključen i na dnu njegove površine je zatvorena prečaga iz koje bi inače duvao vazduh. U donjem desnom uglu uređaja je mala kružna lampica koja je takođe isključena. Takođe su na uređaju vidljiva tri ekrančića koja su isključena (crne boje).
+An interactive 2D air conditioner simulation developed using **C++**, **OpenGL**, **GLFW**, and **GLEW**.
 
-Pritiskom levim klikom miša na lampicu, klima se uključuje. Lampica odmah postane crvena, a prečaga se konstantnom brzinom otvara. Takođe se pale tri ekrančića. Na prvom ekrančiću je napisana željena temperatura, koja je inicijalno podešena na 24°C. Na drugom ekranu je prikazana izmerena temperatura vazduha, koja je incijalno 30°C. Na trećem ekranu je nacrtana vatra ukoliko je željena temperatura veća od izmerene, pahulja ako je manja, a kukica (✅) ako su jednake. Dok god se dve temperature razlikuju, izmerena temperatura se vremenom povećava ili smanjuje dok ne dostigne željenu.
+This application was developed as an individual project for the Computer Graphics course at the Faculty of Technical Sciences, University of Novi Sad.
 
-Pritiskom na taster strelica gore, željena temperatura se povećava za jedan stepen, odnosno smanjuje za 1°C pritiskom na strelicu dole. Opseg željene temperature se kreće između -10°C i 40°C.
+The project demonstrates real-time 2D rendering, interactive controls, animation, and state management through a graphical simulation of an air conditioning system.
 
-Svake sekunde se unutrašnjost lavora puni svetloplavim pravougaonikom koji predstavlja vodu. Pritiskom na taster Space se lavor ispražnjuje, odnosno visina svetloplavog pravougaonika se vraća na 0. Ukoliko pravougaonik dostigne celokupnu zapreminu lavora, klima se isključuje i nije moguće uključiti je dok se lavor ne isprazni.
+## Features
 
-Klimu je takođe moguće isključiti levim klikom na lampicu. Kad se isključi, bilo da li klikom ili zbog napunjenog lavora, ekrani i lampica se gase odmah, a prečaga se zatvara istom brzinom kojom se otvorila.
+- **Interactive Controls** – Turn the air conditioner on or off by clicking its power indicator.
+- **Temperature Adjustment** – Set the desired temperature between -10°C and 40°C using the arrow keys.
+- **Temperature Simulation** – Automatically adjust the current temperature toward the selected value.
+- **Operating Mode Indicators** – Display heating, cooling, or target-temperature status using graphical icons.
+- **Animated Air Vent** – Smoothly open and close the air vent when the system changes state.
+- **Water Collection Simulation** – Gradually fill a water container and automatically shut down the system when it reaches capacity.
+- **Custom Cursor** – Use a remote-control-themed cursor.
 
-Kursor treba da ima izgled daljinskog upravljača tako da mu je laserska lampica u gornjem levom uglu.
+## Technologies
+
+| Component | Technology |
+|---|---|
+| Programming Language | C++ |
+| Graphics API | OpenGL 3.3 |
+| Windowing and Input | GLFW |
+| OpenGL Extension Loading | GLEW |
+| Image Loading | stb_image |
+| Development Environment | Visual Studio |
+
+## Controls
+
+| Input | Action |
+|---|---|
+| Left mouse click on power indicator | Turn the air conditioner on/off |
+| Up Arrow | Increase desired temperature |
+| Down Arrow | Decrease desired temperature |
+| Space | Empty the water container |
+| Escape | Exit the application |
+
+## Getting Started
+
+### Prerequisites
+
+- Visual Studio with C++ desktop development support
+- OpenGL-compatible graphics hardware and drivers
+- GLFW and GLEW dependencies
+
+### Running the Application
+
+1. Clone the repository.
+2. Open `Kostur.sln` in Visual Studio.
+3. Restore the required dependencies and configure the GLFW/GLEW library paths if necessary.
+4. Build and run the project.
+
+**Note:** The Visual Studio project contains machine-specific library paths, so additional configuration may be required.
+
+## Preview
+
+![Air Conditioner Simulation](screenshots/air-conditioner.png)
